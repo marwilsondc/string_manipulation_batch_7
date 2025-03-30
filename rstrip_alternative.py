@@ -20,5 +20,6 @@ def rstrip_alt(string):
     #outside for loop, return str
     return string
 
+#bug: removes all spaces instead of one
 user_string = input("input a string with several spaces after text: ")
 print(rstrip_alt(user_string))
