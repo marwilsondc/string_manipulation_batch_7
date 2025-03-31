@@ -1,5 +1,5 @@
-#define startswith_alt(string: str, val: str, start: int = 0, end: int = len(string)) -> str:
-def startswith_alt(string: str, val: str, start: int = 0, end: int = len):
+#define startswith_alt(string: str, val: str, start: int = 0) -> bool:
+def startswith_alt(string: str, val: str, start: int = 0) -> bool:
 
     #initialize index_count, comparator, value_len
     index_count = 0
@@ -7,7 +7,7 @@ def startswith_alt(string: str, val: str, start: int = 0, end: int = len):
     value_len = len(val)
 
     #create for loop to iterate through string according to parameters
-    for i in string[start:end:1]:
+    for i in string[start::1]:
 
         #within for loop, create if statement to evaluate whether index_count is equal to value_len and comparator is equal to value
         if index_count == value_len and comparator == val:
@@ -25,3 +25,9 @@ def startswith_alt(string: str, val: str, start: int = 0, end: int = len):
         #else, return False
         else:
             return False
+
+#tester
+user_string = input("input a string to evaluate: ")
+user_value = input("input what value to evaluate user string: ")
+
+print(startswith_alt(user_string, user_value, 3))
