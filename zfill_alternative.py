@@ -13,3 +13,8 @@ def zfill_alt(string: str, length: int) -> str:
     #outside while loop, return new_string
     return new_string
 
+#tester
+user_string = input("input a string: ")
+user_val = int(input("input the desired length of new string: "))
+
+print(zfill_alt(user_string, user_val))
