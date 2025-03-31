@@ -14,4 +14,7 @@ def islower_alt(string: str) -> bool:
     else:
         return False
     
+#tester
+user_string = input("input a string: ")
 
+print(islower_alt(user_string))
