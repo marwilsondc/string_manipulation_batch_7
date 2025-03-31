@@ -19,3 +19,8 @@ def upper_alt(string: str) -> str:
 
     #outside for loop, return new_string
     return new_string
+
+#tester
+user_string = input("input a string to use upper on: ")
+
+print(upper_alt(user_string))
