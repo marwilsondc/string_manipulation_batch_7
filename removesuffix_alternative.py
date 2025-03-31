@@ -42,3 +42,9 @@ def removesuffix_alt(string: str, suffix: str) -> str:
         
 #return new_string
     return new_string
+
+#tester
+user_string = input("input a string: ")
+to_remove = input("input suffix to remove: ")
+
+print(removesuffix_alt(user_string, to_remove))
