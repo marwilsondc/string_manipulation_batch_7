@@ -1,13 +1,12 @@
 #define rjust_alt(string: str, val: int, char: str = " ") -> str:
 def rjust_alt(string: str, val: int, char: str = " ") -> str:
 
-    #initialize new_string == string, new_string_len = len(new_string)
+    #initialize new_string == string
     new_string = string
-    new_string_len = len(new_string)
 
     #create while loop to evaluate 
     #bug: endless loop
-    while new_string_len < val:
+    while len(new_string) < val:
 
         #within while loop, add whitespaces to new_string
         new_string = char + new_string
