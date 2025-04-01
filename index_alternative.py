@@ -15,7 +15,7 @@ def index_alt(string: str, val: str, start: int = 0, end: int = 999999) -> int:
 
             #if above statement is True, pass through another if statement that evaluates whether compare_val is equal to val, if True, return index_count
             if compare_val == val:
-                return index_count
+                return index_count + start
             
             #outside nested if statement, continue to else, if True, add 1 to pause_count
             else:
@@ -41,5 +41,5 @@ def index_alt(string: str, val: str, start: int = 0, end: int = 999999) -> int:
 user_string = input("input a string: ")
 user_val = input("input a value to evaluate string with: ")
 
-print(index_alt(user_string, user_val))
-print(user_string.index(input("input a value to evaluate string with: ")))
+print(index_alt(user_string, user_val, 3))
+print(user_string.index(input("input a value to evaluate string with: "), 3))
