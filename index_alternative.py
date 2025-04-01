@@ -1,5 +1,5 @@
 #define index_alt(string: str, val: str, start: int = 0, end: int = 999999) -> int:
-def index_alt(string: str, val: str, start: int = 0, end: int = 999999) -> int:
+def index_alt(string: str, val: str, start: int = 0, end: int = None) -> int:
     index_count = 0
     pause_count = 0
     compare_val = ""
@@ -32,7 +32,11 @@ def index_alt(string: str, val: str, start: int = 0, end: int = 999999) -> int:
 
             #if else is True, reset compare_val, add new iteration to it, reset pause_count, and add 1 to index_count
             compare_val = ""
-            compare_val += i
+            
+            #if length of val is not equal to 1, do not add past iterations to compare_val
+            if len(val) != 1:
+                compare_val += i
+            
             pause_count = 0
             index_count += 1
             continue
@@ -41,5 +45,5 @@ def index_alt(string: str, val: str, start: int = 0, end: int = 999999) -> int:
 user_string = input("input a string: ")
 user_val = input("input a value to evaluate string with: ")
 
-print(index_alt(user_string, user_val, 3))
-print(user_string.index(input("input a value to evaluate string with: "), 3))
+print(index_alt(user_string, user_val))
+print(user_string.index(input("input a value to evaluate string with: ")))
